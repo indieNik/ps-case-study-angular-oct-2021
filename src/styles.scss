@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'variables';
+
+/* Reset Styles Start */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    font-family: sans-serif;
+}
+
+/* Reset Styles End */
+
+
+/* Element Styles Start */
+button {
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    box-shadow: 0 0 0.3em #ccc;
+    color: #333;
+    cursor: pointer;
+}
+/* Element Styles End */
+
+/* Utility Styles Start */
+.container {
+    width: 100vw;
+    display: flex;
+    max-width: $max-container-width;
+    margin: auto;
+}
+
+a.link {
+    display: block;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+        border-bottom: .2em solid rgba(240, 44, 44, 0.849);
+        transition: border .1s ease-out;
+    }
+}
+/* Utility Styles End */

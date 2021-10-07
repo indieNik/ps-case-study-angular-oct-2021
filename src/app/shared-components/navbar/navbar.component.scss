@@ -1,0 +1,33 @@
+@import 'variables';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    height: $navbar-height;
+    max-width: $max-container-width;
+    margin: auto;
+    &.navbar-light {
+        background-color: #fff;
+        color: #333;
+    }
+    .logo {
+        font-family: cursive;
+    }
+    .navbar-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+        .navbar-link {
+            text-decoration: none;
+            &:hover {
+                border-bottom: .2em solid rgba(240, 44, 44, 0.849);
+                transition: border .1s ease-out;
+            }
+        }
+    }
+}

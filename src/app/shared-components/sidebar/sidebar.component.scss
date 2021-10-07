@@ -1,0 +1,24 @@
+@import 'variables';
+
+.sidebar {
+    background-color: #444;
+    padding: 2em 0;
+    height: calc(100vh - #{$navbar-height});
+    max-width: 20vw;
+    min-width: 10em;
+    .sidebar-links {
+        display: grid;
+        .sidebar-link {
+            list-style: none;
+            margin-bottom: 2em;
+            .link {
+                padding: 1em 3em;
+                // text-align: center;
+                text-transform: uppercase;
+                &:hover {
+                    background-color: #333;
+                }
+            }
+        }
+    }
+}
