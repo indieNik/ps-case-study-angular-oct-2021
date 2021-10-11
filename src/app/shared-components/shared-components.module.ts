@@ -4,6 +4,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { RecursiveBannerComponent } from './recursive-banner/recursive-banner.component';
+import { EcommerceCardComponent } from './ecommerce-card/ecommerce-card.component';
 
 
 @NgModule({
@@ -11,6 +12,7 @@ import { RecursiveBannerComponent } from './recursive-banner/recursive-banner.co
     NavbarComponent,
     SidebarComponent,
     RecursiveBannerComponent,
+    EcommerceCardComponent,
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { RecursiveBannerComponent } from './recursive-banner/recursive-banner.co
     NavbarComponent,
     SidebarComponent,
     RecursiveBannerComponent,
+    EcommerceCardComponent,
   ]
 })
 export class SharedComponentsModule { }

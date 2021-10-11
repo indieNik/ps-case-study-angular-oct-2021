@@ -1,0 +1,64 @@
+@import 'variables';
+
+.route-two-wrapper {
+    display: grid;
+    gap: 1em;
+    margin: 1em;
+    .filters {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding: 1em;
+        padding-top: 0;
+        gap: 1em;
+        // background-color: #e2e2e2;
+        .style-switcher {
+            display: flex;
+            align-items: center;
+            border-radius: 0.5em;
+            overflow: hidden;
+            button {
+                border-radius: 0;
+                // background-color: #ccc;
+                &.active {
+                    background-color: #eedf0fb3;
+                }
+            }
+        }
+        .price-filter {
+            select {
+                border-radius: 0.5em;
+                font-size: .7em;
+                padding: .3em;
+            }
+        }
+    }
+    .ecommerce-cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        margin: 0 2em 1em;
+        padding: 1em 0;
+        max-height: calc(95vh - 220px);
+        overflow-y: scroll;
+        &:hover::-webkit-scrollbar {
+            width: .2em;
+        }
+        &:hover::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-image: -webkit-gradient(linear,right bottom,right top,color-stop(.44,#eedf0fb3),color-stop(.72,#e28a17e6));
+        }
+        &:hover::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px #33333320;
+            -webkit-box-shadow: inset 0 0 6px #33333320;
+            background-color: #ffffff;
+            border-radius: 10px;
+        }
+        &.list-layout {
+            display: grid;
+            grid-template-columns: 22vw 22vw;
+            column-gap: 2em;
+            padding: 1em;
+        }
+    }
+}

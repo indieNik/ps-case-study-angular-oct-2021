@@ -1,0 +1,27 @@
+<div class="route-two-wrapper">
+    <h1>Happy Store</h1>
+    <div class="filters">
+        <div class="style-switcher">
+            <button (click)="toggleViewStyle('grid')" [ngClass]="{active: this.config.viewStyle === 'grid'}">
+                grid
+            </button>
+            <button (click)="toggleViewStyle('list')" [ngClass]="{active: this.config.viewStyle === 'list'}">
+                list
+            </button>
+        </div>
+        <div class="price-filter">
+            <select #sortByPriceEl (change)="sortProducts(sortByPriceEl.value)" name="sort-by-price" id="sort-by-price">
+                <option value=true>PRICE: LOW TO HIGH</option>
+                <option value=false>PRICE: HIGH TO LOW</option>
+            </select>
+        </div>
+    </div>
+    <div
+        class="ecommerce-cards-wrapper"
+        [ngClass]="{'list-layout': this.config.viewStyle === 'list'}"
+    >
+        <ps-ecommerce-card *ngFor="let item of this.config.items; let i = index">
+            {{ item }}
+        </ps-ecommerce-card>
+    </div>
+</div>
