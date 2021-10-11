@@ -1,0 +1,12 @@
+<div style="height: 100%; min-width: 80vw;" class="flex-center">
+    <ng-template [ngTemplateOutlet]="borderedTemplate" [ngTemplateOutletContext]="{ $implicit: boxes }"></ng-template>
+</div>
+
+<ng-template #borderedTemplate let-looper>
+    <div class="border-container">
+        <div *ngIf="looper">
+            <ng-template [ngTemplateOutlet]="borderedTemplate" [ngTemplateOutletContext]="{ $implicit: looper - 1 }"></ng-template>
+        </div>
+        <span *ngIf="looper === 0">{{ text }}</span>
+    </div>
+</ng-template>

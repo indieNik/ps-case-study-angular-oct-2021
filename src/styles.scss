@@ -42,4 +42,10 @@ a.link {
         transition: border .1s ease-out;
     }
 }
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 /* Utility Styles End */

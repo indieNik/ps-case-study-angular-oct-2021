@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { RouteOneRoutingModule } from './route-one-routing.module';
 import { RouteOneComponent } from './route-one.component';
+import { SharedComponentsModule } from '../shared-components/shared-components.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { RouteOneComponent } from './route-one.component';
   ],
   imports: [
     CommonModule,
-    RouteOneRoutingModule
+    RouteOneRoutingModule,
+    SharedComponentsModule,
   ]
 })
 export class RouteOneModule { }

@@ -1,0 +1,7 @@
+@import 'variables';
+
+.border-container {
+    padding: 1em;
+    border: 0.2em solid $dark-color;
+    color: $dark-color;
+}
