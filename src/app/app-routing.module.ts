@@ -13,6 +13,7 @@ const routes: Routes = [
     loadChildren: () => import('./route-one/route-one.module').then(m => m.RouteOneModule)
   },
   { path: 'route-two', loadChildren: () => import('./route-two/route-two.module').then(m => m.RouteTwoModule) },
+  { path: 'route-three', loadChildren: () => import('./route-three/route-three.module').then(m => m.RouteThreeModule) },
   {
     path: '**',
     pathMatch: 'full',

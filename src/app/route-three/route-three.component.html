@@ -1,0 +1,6 @@
+<div class="route-three-wrapper">
+    <ps-timer-display [startTime]="timerConfig.timer"></ps-timer-display>
+    <ps-timer-trigger [timerConfig]="timerConfig" (toggleTimeClick)="toggleTimerState($event)"></ps-timer-trigger>
+    <ps-timer-logger [timerLogs]="timerConfig.timerlogs"></ps-timer-logger>
+    <ps-timer-clicks [startClicks]="timerConfig.startClicks" [pauseClicks]="timerConfig.pauseClicks"></ps-timer-clicks>
+</div>

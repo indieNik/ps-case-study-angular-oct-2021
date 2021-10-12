@@ -13,6 +13,17 @@
 
 
 /* Element Styles Start */
+
+.ps-form {
+    .form-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        margin: 1em;
+    }
+}
+
 button {
     border: none;
     padding: 0.5em 1em;
@@ -20,6 +31,13 @@ button {
     box-shadow: 0 0 0.3em #ccc;
     color: #333;
     cursor: pointer;
+    &:disabled {
+        opacity: 50%;
+    }
+    &.accent-black-btn {
+        background-color: #333;
+        color: #fff;
+    }
 }
 /* Element Styles End */
 
@@ -49,5 +67,19 @@ a.link {
     align-items: center;
     justify-content: center;
     text-align: center;
+    &.with-gap {
+        gap: 1em;
+    }
+    &.vertical {
+        flex-direction: column;
+    }
+}
+
+.bordered {
+    border: 0.25em solid $dark-color;
+}
+
+.font-size-small {
+    font-size: small;
 }
 /* Utility Styles End */

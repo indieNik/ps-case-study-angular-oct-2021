@@ -1,0 +1,9 @@
+.route-three-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2em;
+    border: .3em solid #333;
+    align-items: center;
+    margin: 2em;
+    padding: 2em;
+}

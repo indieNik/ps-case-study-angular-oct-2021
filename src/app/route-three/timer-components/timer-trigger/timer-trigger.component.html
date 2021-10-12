@@ -1,0 +1,22 @@
+<div class="bordered">
+    <div class="ps-form">
+        <div class="form-row">
+            <label class="font-size-small" for="timer-input">Enter Timer Limit</label>
+            <input
+                [disabled]="!enableTimerInput"
+                [(ngModel)]="initialTime"
+                type="number"
+                name="timer-input"
+                id="timer-input"
+            >
+        </div>
+        <div class="form-row">
+            <button [disabled]="enableTimerInput" (click)="changeTimer(initialTime, false)" class="accent-black-btn">
+                Start / Pause
+            </button>
+            <button (click)="changeTimer(initialTime, true)">
+                {{ enableTimerInput ? 'Set' : 'Reset'}}
+            </button>
+        </div>
+    </div>
+</div>
