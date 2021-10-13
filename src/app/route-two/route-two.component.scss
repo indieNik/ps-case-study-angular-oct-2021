@@ -56,7 +56,7 @@
         }
         &.list-layout {
             display: grid;
-            grid-template-columns: 22vw 22vw;
+            grid-template-columns: minmax(200px, 25vw) minmax(200px, 25vw);
             column-gap: 2em;
             padding: 1em;
         }
