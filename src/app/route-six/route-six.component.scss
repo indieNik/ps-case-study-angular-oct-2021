@@ -1,0 +1,23 @@
+@import 'variables';
+
+.route-six-wrapper {
+    display: grid;
+    padding: 1em 0;
+    height: calc(90vh - #{$navbar-height});
+    width: calc(100vw - #{$sidebar-max-width});
+}
+
+.observer {
+    max-height: calc(80vh - #{$navbar-height});
+    overflow-y: scroll;
+    .target-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+    }
+    .target {
+        background-color: #ccc;
+        padding: 1em;
+    }
+}

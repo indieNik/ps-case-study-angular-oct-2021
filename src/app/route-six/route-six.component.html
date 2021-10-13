@@ -1,0 +1,17 @@
+<!-- <ps-ecommerce-card *ngFor="let item of [].constructor(10)"></ps-ecommerce-card> -->
+
+<div class="route-six-wrapper flex-center">
+    <h1 class="flex-center">
+        Infinite Magic Cards
+    </h1>
+    <div class="observer">
+        <div class="target-wrapper">
+            <ps-ecommerce-card *ngFor="let card of [].constructor(boxCards); let i = index">
+                <button (click)="handleAlert(i+1)">
+                    Button {{ i + 1 }}
+                </button>
+            </ps-ecommerce-card>
+            <div class="target"></div>
+        </div>
+    </div>
+</div>
