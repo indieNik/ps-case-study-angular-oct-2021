@@ -21,7 +21,7 @@
         [ngClass]="{'list-layout': this.config.viewStyle === 'list'}"
     >
         <ps-ecommerce-card *ngFor="let item of this.config.items; let i = index">
-            {{ item }}
+            {{ item + 1 }}
         </ps-ecommerce-card>
     </div>
 </div>

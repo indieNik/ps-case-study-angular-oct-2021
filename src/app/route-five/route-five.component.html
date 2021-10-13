@@ -1,0 +1,17 @@
+<div class="route-five-wrapper">
+    <div class="flex-center vertical">
+        <div *ngIf="sortDataState.sortedData.length" class="ps-table">
+            <div class="ps-table-row table-header">
+                <div *ngFor="let header of columnHeaders" class="ps-table-cell" (click)="sortColumn(header)">
+                    {{ header.name | titlecase}} {{ header.sorting ? header.sortAsc ? '↑' : '↓' : '' }}
+                </div>
+            </div>
+            <div *ngFor="let row of sortDataState.sortedData" class="ps-table-row">
+                <div *ngFor="let header of columnHeaders" class="ps-table-cell">
+                    {{ row[header.name] }}
+                </div>
+            </div>
+        </div>
+        <p *ngIf="!sortDataState.sortedData.length">No Data to display</p>
+    </div>
+</div>

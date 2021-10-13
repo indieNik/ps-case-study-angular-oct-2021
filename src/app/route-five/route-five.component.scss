@@ -1,0 +1,38 @@
+@import 'variables';
+
+:root {
+    --ps-table-columns: 4;
+}
+
+.route-five-wrapper {
+    min-height: 40vh;
+    width: calc(100vw - #{$sidebar-max-width});
+    display: grid;
+    user-select: none;
+}
+
+.ps-table {
+    .ps-table-row {
+        &.table-header {
+            font-weight: 600;
+            border-bottom: 1px solid $dark-color;
+            .ps-table-cell {
+                background-color: $dark-color;
+                color: $light-color;
+                border: 1px solid rgba($color: $light-color, $alpha: .2);
+                cursor: pointer;
+            }
+        }
+        display: grid;
+        grid-template-columns: repeat(var(--ps-table-columns), 1fr);
+        .ps-table-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $dark-color;
+            padding: 0.7em 1em;
+            background-color: $light-color;
+            color: $dark-color;
+        }
+    }
+}

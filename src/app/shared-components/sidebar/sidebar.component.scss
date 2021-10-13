@@ -4,7 +4,7 @@
     background-color: #444;
     padding: 2em 0;
     height: calc(100vh - #{$navbar-height});
-    max-width: 20vw;
+    max-width: $sidebar-max-width;
     min-width: 15em;
     .sidebar-links {
         display: grid;
