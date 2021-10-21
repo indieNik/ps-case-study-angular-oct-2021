@@ -1,0 +1,6 @@
+<div class="flex-center vertical with-gap">
+    <p *ngIf="!timerService.timerConfig.timerlogs.length">Timer has been reset or is yet to start!</p>
+    <p *ngFor="let log of timerService.timerConfig.timerlogs">
+        {{ log }}
+    </p>
+</div>
