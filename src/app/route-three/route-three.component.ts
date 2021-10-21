@@ -57,9 +57,9 @@ export class RouteThreeComponent implements OnInit {
     if (this.timerConfig.timerRunning) {
       this.pauseTimer();
     } else {
-      console.log('initialTime: ', initialTime);
-      console.log('timer: ', this.timerConfig.timer);
-      console.log('initialTimerValue: ', this.timerConfig.initialTimerValue);
+      // console.log('initialTime: ', initialTime);
+      // console.log('timer: ', this.timerConfig.timer);
+      // console.log('initialTimerValue: ', this.timerConfig.initialTimerValue);
       this.startTimer();
     }
   }

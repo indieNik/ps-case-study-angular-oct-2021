@@ -25,9 +25,9 @@ export class RouteTwoComponent implements OnInit {
   }
 
   toggleViewStyle(style = 'grid') {
-    console.log('style: ', style);
+    // console.log('style: ', style);
     if ( this.config.viewStyle === style) {
-      console.log('Same sa,e');
+      // console.log('Same sa,e');
     } else {
       if (this.config.viewStyle === 'grid') {
         this.config.viewStyle = 'list';
@@ -38,7 +38,7 @@ export class RouteTwoComponent implements OnInit {
   }
 
   sortProducts(sortAsc: any = true) {
-    console.log('sortAsc: ', sortAsc);
+    // console.log('sortAsc: ', sortAsc);
     this.config.orderAsc = sortAsc;
     this.getItems();
   }
@@ -48,7 +48,7 @@ export class RouteTwoComponent implements OnInit {
     if (this.config.orderAsc) {
       this.config.items = itemsCopy.reverse();
     }
-    console.log('items: ', this.config.items);
+    // console.log('items: ', this.config.items);
   }
 
 }

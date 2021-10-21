@@ -9,17 +9,25 @@ export class TimerService {
         initialTimerValue: 0,
         timer: 0,
         timerRunning: false,
-        timerlogs: [''],
+        timerlogs: new Array,
         startClicks: 0,
         pauseClicks: 0,
       }
       interval: any;
 
       startTimer() {
-        this.timerConfig.startClicks++;
-        this.timerConfig.timerRunning = true;
-        this.interval = setInterval(() => this.timerConfig.timer--, 1000);
-        this.timerConfig.timerlogs.push(`Started at ${this.getTimeStr()}`);
+        if (this.timerConfig.timer > 1) {
+          this.timerConfig.startClicks++;
+          this.timerConfig.timerRunning = true;
+          this.interval = setInterval(() => {
+            if (this.timerConfig.timer !== 0) {
+              this.timerConfig.timer--;
+            } else {
+              clearInterval(this.interval);
+            }
+          }, 1000);
+          this.timerConfig.timerlogs.push(`Started at ${this.getTimeStr()}`);
+        }
       }
     
       pauseTimer() {
@@ -48,9 +56,9 @@ export class TimerService {
         if (this.timerConfig.timerRunning) {
           this.pauseTimer();
         } else {
-          console.log('initialTime: ', initialTime);
-          console.log('timer: ', this.timerConfig.timer);
-          console.log('initialTimerValue: ', this.timerConfig.initialTimerValue);
+          // console.log('initialTime: ', initialTime);
+          // console.log('timer: ', this.timerConfig.timer);
+          // console.log('initialTimerValue: ', this.timerConfig.initialTimerValue);
           this.startTimer();
         }
       }
